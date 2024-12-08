@@ -25,6 +25,7 @@ ReactGA.send({
   hitType:"pageview",
   page:window.location.pathname,
 });
+ReactGA.send({ hitType: "pageview", page: "/contact", title: "Contact page viewed" });
 
 function App() {
   return (
