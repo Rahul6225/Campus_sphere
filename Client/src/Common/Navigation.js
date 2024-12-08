@@ -10,7 +10,7 @@ const Header = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/auth/verify", {
+        const response = await axios.get("https://campus-sphere-y2gb.vercel.app/api/auth/verify", {
           withCredentials: true, // Send cookies for auth
         });
 
@@ -35,7 +35,7 @@ const Header = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:4000/api/auth/logout",
+        "https://campus-sphere-y2gb.vercel.app/api/auth/logout",
         {},
         { withCredentials: true } // Send cookies to server
       );

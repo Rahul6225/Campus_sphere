@@ -10,7 +10,7 @@ export default function Attendance() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:4000/admin/student", {
+      const response = await fetch("https://campus-sphere-y2gb.vercel.app/admin/student", {
         method: "GET",
         credentials: "include",
       });

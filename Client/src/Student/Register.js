@@ -18,7 +18,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4000/register", {
+      const response = await fetch("https://campus-sphere-y2gb.vercel.app/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
