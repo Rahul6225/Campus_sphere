@@ -21,7 +21,7 @@ const Login = () => {
       console.log('Response status code:', response.status);
 
       if (response.status === 200) {
-        const userResponse = await axios.get("https://campus-sphere-y2gb.vercel.app/api/auth/verify", {
+        const userResponse = await axios.get("http://localhost:4000/api/auth/verify", {
           withCredentials: true,
         });
   

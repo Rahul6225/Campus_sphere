@@ -35,7 +35,7 @@ const Medical = () => {
         });
 
         try {
-          const response = await fetch("https://campus-sphere-y2gb.vercel.app/medical-form-submit", {
+          const response = await fetch("http://localhost:4000/medical-form-submit", {
             method: "POST",
             body: formDataToSend,
             credentials : "include"

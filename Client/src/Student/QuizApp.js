@@ -9,7 +9,7 @@ function QuizApp() {
 
   useEffect(() => {
     // Fetch quiz data from the backend
-    fetch('https://campus-sphere-y2gb.vercel.app/api/get-quiz')
+    fetch('http://localhost:4000/api/get-quiz')
       .then((res) => res.json())
       .then((data) => setQuizData(data))
       .catch((err) => console.error(err));
