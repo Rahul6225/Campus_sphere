@@ -17,15 +17,18 @@ import './App.css'
 import QuizApp from './Student/QuizApp.js'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'; // Router just renders the component according to the navigation links set through NavLinks
-
+import { useEffect } from 'react'
 import ReactGA from "react-ga4";
 
 ReactGA.initialize("G-PMB6L869LE");
-ReactGA.send({
-  hitType:"pageview",
-  page:window.location.pathname,
-});
-ReactGA.send({ hitType: "pageview", page: "/contact", title: "Contact page viewed" });
+useEffect(()=>{
+  ReactGA.send({
+    hitType:"pageview",
+    page:window.location.pathname,
+  });
+  ReactGA.send({ hitType: "pageview", page: "/contact", title: "Contact page viewed" });
+},[])
+
 
 function App() {
   return (
