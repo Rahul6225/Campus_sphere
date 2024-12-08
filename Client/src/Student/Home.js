@@ -3,8 +3,12 @@ import Footer from '../Common/Footer';
 import '../App.css'
 import '../Styles/Home.css';
 import {Link} from 'react-router-dom';
-
+import ReactGA from "react-ga";
+import { useEffect } from 'react';
 export default function Home() {
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  },[]);
   return (
     <div>
       <div className="home-container">

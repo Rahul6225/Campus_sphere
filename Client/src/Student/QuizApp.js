@@ -41,6 +41,7 @@ function QuizApp() {
       .then((data) => {
         // Backend returns the score
         setScore(data.score); // Assuming the backend sends back a score
+        
       })
       .catch((err) => console.error('Error submitting answers:', err));
   };

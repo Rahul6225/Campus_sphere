@@ -15,6 +15,7 @@ const Login = () => {
         'http://localhost:4000/api/auth/login',
         { username, password },
         { withCredentials: true }
+        
       );
 
       console.log('Response status code:', response.status);

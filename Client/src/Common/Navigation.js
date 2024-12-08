@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, Navigate, Outlet } from "react-router-dom";
 import axios from "axios"; // Ensure axios is installed and imported
+import ReactGA from "react-ga";
 
 const Header = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Default: Not authenticated
@@ -41,6 +42,10 @@ const Header = () => {
       setIsAuthenticated(false); // Update state
     } catch (error) {
       console.error("Logout failed:", error.response?.data || error.message);
+      ReactGA.exception({
+        description: 'An error occurred',
+        fatal: true
+      });
     }
   };
 

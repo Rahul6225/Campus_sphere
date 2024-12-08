@@ -2,6 +2,7 @@ import "../Styles/Login_SignUp.css";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ReactGA from "react-ga";
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -17,11 +18,16 @@ const SignUpPage = () => {
         { withCredentials: true }
       );
       alert("Signup successful");
+      ReactGA.event({
+        category: 'User',
+        action: 'Created an Account'
+      });
       if (response.status === 201) {
         navigate("/login"); // Redirect to login page
       }
     } catch (err) {
       console.error(err);
+      console.log("Signupn Failed")
       alert("Signup failed");
     }
   };

@@ -1,7 +1,6 @@
 import LoginPage from './Common/Login.js'
 import SignupPage from './Common/Signup.js'
 import ProtectedRoute from './Common/ProtectedRoute.js'
-
 import Navigation from './Common/Navigation.js'
 import Home from './Student/Home.js'
 import StudentInfo from './Student/StudentInfo.js'
@@ -20,7 +19,6 @@ import QuizApp from './Student/QuizApp.js'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'; // Router just renders the component according to the navigation links set through NavLinks
 
 function App() {
-
   return (
     <Router>
 

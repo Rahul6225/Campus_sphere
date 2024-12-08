@@ -1,13 +1,13 @@
 import "../Styles/Attendance.css"
 import {useState, useEffect} from 'react';
-
+import ReactGA from "react-ga";
 const Attendance = () => {
 
   const [studentData, setstudentData] = useState({});
 
   const [userName, setUserName] = useState("");
 
-  let username = "";
+  // let username = "";
   const fetchData = async () => {
     try{
       const response = await fetch(`http://localhost:4000/attendance/fetchAttendance`, {method : "GET", credentials : "include"});
