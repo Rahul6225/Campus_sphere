@@ -26,7 +26,7 @@ useEffect(()=>{
     hitType:"pageview",
     page:window.location.pathname,
   });
-  ReactGA.send({ hitType: "pageview", page: "/contact", title: "Contact page viewed" });
+  ReactGA.send({ hitType: "pageview", page: "/contact", title: "Contact page viewed many times" });
 },[])
 
 
