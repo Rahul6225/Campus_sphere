@@ -18,18 +18,13 @@ import QuizApp from './Student/QuizApp.js'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'; // Router just renders the component according to the navigation links set through NavLinks
 
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga4";
 
-// Initialize Google Analytics
-export const initGA = () => {
-  ReactGA.initialize('G-PMB6L869LE'); 
-};
-
-// Track page views
-export const logPageView = () => {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname + window.location.search);
-};
+ReactGA.initialize("G-PMB6L869LE");
+ReactGA.send({
+  hitType:"pageview",
+  page:window.location.pathname,
+});
 
 function App() {
   return (
