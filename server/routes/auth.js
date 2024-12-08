@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { Users } = require('../models/user');
+const ReactGA = require('react-ga');
 
 const router = express.Router();
 console.log("auth routes loaded");
