@@ -45,7 +45,7 @@ function QuizApp() {
         function App() {
           useEffect(() => {
             ReactGA.event({
-              category: "Quiz",
+              category: "quiz",
               action: "Successfully Submitted the Quiz",
               label: quizId
             });
