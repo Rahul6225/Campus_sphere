@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import QuesCard from './QuesCard';
 import '../Styles/QuizApp.css';
-import ReactGA from "react-ga4";
 
 function QuizApp() {
   const [quizData, setQuizData] = useState([]);
@@ -31,7 +30,7 @@ function QuizApp() {
     console.log('Submission Data:', submissionData);
   
     // Send data to the backend
-    fetch('http://localhost:4000/api/submit-quiz', {
+    fetch('https://campus-sphere-y2gb.vercel.app/api/submit-quiz', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,11 +41,10 @@ function QuizApp() {
       .then((data) => {
         // Backend returns the score
         setScore(data.score); // Assuming the backend sends back a score
-        }
-      )
-  
+        
+      })
       .catch((err) => console.error('Error submitting answers:', err));
-  }
+  };
 
   return (
     <div>
