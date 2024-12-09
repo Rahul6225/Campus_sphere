@@ -10,7 +10,7 @@ export default function Attendance() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:4000/admin/student", {
+      const response = await fetch("https://test-production-69a9.up.railway.app/admin/student", {
         method: "GET",
         credentials: "include",
       });

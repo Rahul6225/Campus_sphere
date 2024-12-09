@@ -13,7 +13,7 @@ const SignUpPage = () => {
     e.preventDefault(); // Prevent the default form submission
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/auth/signup",
+        "https://test-production-69a9.up.railway.app/api/auth/signup",
         { username, password },
         { withCredentials: true }
       );

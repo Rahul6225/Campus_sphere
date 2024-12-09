@@ -9,7 +9,7 @@ const Info = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/student-info`, { method: "GET" , credentials: "include"});
+      const response = await fetch(`https://test-production-69a9.up.railway.app/student-info`, { method: "GET" , credentials: "include"});
 
       const data = await response.json();
       console.log(data);

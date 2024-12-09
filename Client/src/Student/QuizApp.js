@@ -9,7 +9,7 @@ function QuizApp() {
 
   useEffect(() => {
     // Fetch quiz data from the backend
-    fetch('http://localhost:4000/api/get-quiz')
+    fetch('https://test-production-69a9.up.railway.app/api/get-quiz')
       .then((res) => res.json())
       .then((data) => setQuizData(data))
       .catch((err) => console.error(err));
@@ -30,7 +30,7 @@ function QuizApp() {
     console.log('Submission Data:', submissionData);
   
     // Send data to the backend
-    fetch('http://localhost:4000/api/submit-quiz', {
+    fetch('https://test-production-69a9.up.railway.app/api/submit-quiz', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

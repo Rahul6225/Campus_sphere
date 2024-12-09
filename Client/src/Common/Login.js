@@ -21,7 +21,7 @@ const Login = () => {
       console.log('Response status code:', response.status);
 
       if (response.status === 200) {
-        const userResponse = await axios.get("http://localhost:4000/api/auth/verify", {
+        const userResponse = await axios.get("https://test-production-69a9.up.railway.app/api/auth/verify", {
           withCredentials: true,
         });
   

@@ -35,7 +35,7 @@ const Medical = () => {
         });
 
         try {
-          const response = await fetch("http://localhost:4000/medical-form-submit", {
+          const response = await fetch("https://test-production-69a9.up.railway.app/medical-form-submit", {
             method: "POST",
             body: formDataToSend,
             credentials : "include"
