@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault(); // Prevent form submission refresh
     try {
       const response = await axios.post(
-        'http://localhost:4000/api/auth/login',
+        'https://test-production-69a9.up.railway.app/api/auth/login',
         { username, password },
         { withCredentials: true }
         
