@@ -31,7 +31,7 @@ function App() {
     ReactGA.send({
       hitType: "pageview",
       page: "/contact",
-      title: "Contact page viewed many times",
+      title: "Contact Page viewed",
     });
   }, []);
 
