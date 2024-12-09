@@ -30,7 +30,7 @@ function QuizApp() {
     console.log('Submission Data:', submissionData);
   
     // Send data to the backend
-    fetch('https://campus-sphere-y2gb.vercel.app/api/submit-quiz', {
+    fetch('http://localhost:4000/api/submit-quiz', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
