@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import QuesCard from './QuesCard';
 import '../Styles/QuizApp.css';
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-PMB6L869LE");
 
 function QuizApp() {
   const [quizData, setQuizData] = useState([]);
@@ -42,17 +41,10 @@ function QuizApp() {
       .then((res) => res.json())
       .then((data) => {
         // Backend returns the score
-        useEffect(() => {
-            ReactGA.event({
-              category: "Quiz",
-              action: "Successfully Submitted the Quiz",
-              label: quizId
-            });
-          }, []);
         setScore(data.score); // Assuming the backend sends back a score
         }
       )
-    
+  
       .catch((err) => console.error('Error submitting answers:', err));
   }
 
